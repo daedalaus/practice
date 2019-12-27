@@ -1,0 +1,13 @@
+setup.py
+weibo_temp/__init__.py
+weibo_temp/items.py
+weibo_temp/middlewares.py
+weibo_temp/pipelines.py
+weibo_temp/settings.py
+weibo_temp.egg-info/PKG-INFO
+weibo_temp.egg-info/SOURCES.txt
+weibo_temp.egg-info/dependency_links.txt
+weibo_temp.egg-info/entry_points.txt
+weibo_temp.egg-info/top_level.txt
+weibo_temp/spiders/__init__.py
+weibo_temp/spiders/weibo.py

@@ -1,0 +1,7 @@
+{
+  "webui": {
+    "username": "root",
+    "password": "123456",
+    "need-auth": true
+  }
+}
