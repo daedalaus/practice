@@ -1,0 +1,23 @@
+<!--<!DOCTYPE html>-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function updateStatus (docNum) {
+        alert(docNum);
+        }
+
+        function addItem (ducNum) {
+        var html =
+        "<a class='non-lin alink' type='button' onclick='updateStatus(\"" + ducNum + "\")'>Test details</a>";
+        container = document.getElementById("container");
+        container.innerHTML = html;
+        }
+    </script>
+</head>
+<body>
+<button onclick="addItem('Keg66k')">点击增加元素</button>
+<div id="container"></div>
+</body>
+</html>
