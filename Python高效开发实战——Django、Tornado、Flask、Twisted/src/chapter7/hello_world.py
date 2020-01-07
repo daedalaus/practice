@@ -78,7 +78,6 @@ class ResponseHandler(tornado.web.RequestHandler):
         self.set_header('number', 8)
         self.set_header('language', 'france')
         self.add_header('language', 'chinese')
-        self.current_user
 
 
 handlers = [
