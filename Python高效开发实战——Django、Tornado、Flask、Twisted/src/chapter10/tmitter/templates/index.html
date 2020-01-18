@@ -1,0 +1,14 @@
+<div class="list">
+    <ol>
+    {% for item in notes %}
+        <li>
+            {% include 'include/list_item.html' %}    <!-- 用另外一个子模板显示信息条目 -->
+        </li>
+    {% endfor %}
+    </ol>
+    <div class="pagebar">
+        {{ page_bar|safe }}    <!-- 分页条 -->
+        <img src="/statics/images/feed.png" alt="feed icon" style="border:0;margin-bottom:-2px;">  <!-- logon图标 -->
+
+    </div>
+</div>

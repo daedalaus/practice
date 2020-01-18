@@ -1,0 +1,54 @@
+<span class="first">
+    <!-- 如果本页不是首页，即page_index不等于1，则显示到首页的链接 -->
+    {% ifequal page_index 1 %}
+        {% trans 'First' %}
+    {% else %}
+        <a href="{% url mvc.views.index_user_page username page_index %}">
+            {% trans 'First' %}
+        </a>
+    {% endifequal %}
+</span>
+
+<span class="prev">
+    <!-- 如果本页有前一页，则显示到前一页的链接 -->
+    {% if has_prev %}
+        <a href="{% url mvc.views.index_user_page username page_prev %}">
+            {% trans 'Prev' %}
+        </a>
+    {% else %}
+        {% trans 'Prev' %}
+    {% endif %}
+</span>
+
+<span class="page">
+    <!-- 显示当前页和总页数 -->
+{{ page_index }}/{{ page_count }}
+</span>
+
+<span class="next">
+    <!-- 如果本页有后一页，则显示到后一页的链接 -->
+    {% if has_next %}
+        <a href="{% url mvc.views.index_user_page username page_next %}">
+            {% trans 'Next' %}
+        </a>
+    {% else %}
+        {% trans 'Next' %}
+    {% endif %}
+</span>
+
+<span class="last">
+    <!-- 如果本页不是末页，则page_index不等于总页数，则显示到末页的链接 -->
+    {% ifequal page_index page_count %}
+        {% trans 'Last' %}
+    {% else %}
+        <a href="{% url mvc.views.index_user_page username page_count %}">
+            {% trans 'Last' %}
+        </a>
+    {% endifequal %}
+</span>
+
+<br>
+<span class="tip">
+    <!-- 显示信息总条数 -->
+    {% trans 'All of '%} {{ row_count }} {% trans 'messages' %}
+</span>
